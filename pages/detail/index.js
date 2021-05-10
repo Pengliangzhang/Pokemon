@@ -1,7 +1,8 @@
-import React from 'react'
-import Table from './../components/table'
+import React from 'react';
+import Detail from './../../components/detail'
+import { useRouter, withRouter } from 'next/router'
+import axios from 'axios';
 export default function Home() {
-
   return (
     <div className="container">
       <main>
@@ -9,7 +10,7 @@ export default function Home() {
           <img src="/header2018z-lg.png" />
         </div>
         <div>
-          <Table name="TableComponents" />
+          <Detail />
         </div>
       </main>
 
@@ -20,13 +21,8 @@ export default function Home() {
           text-align: center
         }
       `}</style>
-
-      <style jsx global>{`
-        .container {
-          padding: 0px;
-          margin: 0px;
-        }
-      `}</style>
     </div>
   )
 }
+
+// export default withRouter(detailHome)
